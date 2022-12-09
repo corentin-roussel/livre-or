@@ -94,7 +94,6 @@
                 <label class="space" for="password">Mot de passe</label>
                 <input class="space input" type="password" name ="password"  placeholder="Entrez votre mot de passe" >
 
-                <p>Password admin = Admin.123</p>
 
                 <input class="button" type="submit"  name="connexion" value="Connexion">
             </form>

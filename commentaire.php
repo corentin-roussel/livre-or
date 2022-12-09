@@ -9,7 +9,7 @@
         if(isset($_POST['submit'])) {
             $comment = htmlspecialchars(trim($comment));
             $sessionId = $_SESSION['id'];
-            $date = date("Y-m-d H:i:s");
+            $date = date("Y-d-m H:i:s");
 
             if(empty($comment)) {
                 $valid = FALSE;
@@ -19,6 +19,8 @@
             if($valid) {
                 $req = ("INSERT INTO commentaires (`commentaire`,`id_utilisateur`, `date`) VALUES ('$comment','$sessionId', '$date')");
                 $comment = mysqli_query($mysqli, $req);
+
+                header("Location, livre-or.php");
             }
         }
     }
